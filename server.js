@@ -11,7 +11,7 @@ var routes = require('./src/routes')
 var app = express()
 app.set('view engine', 'ejs')
 app.set('views', process.cwd() + '/dist/views')
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 3000))
 app.use(express.static('dist'))
 
 
@@ -52,7 +52,7 @@ app.get('/news/story/:id', function (req, res, next) {
           res.render('index', { markup: markup })
       })
     }
-  })  
+  })
 });
 
 app.get('*', function(req, res) {
@@ -68,7 +68,7 @@ app.get('*', function(req, res) {
     }
     else if (props) {
       var markup = renderToString(React.createElement(ReactRouter.RouterContext, props, null))
-      res.render('index', { markup: markup })        
+      res.render('index', { markup: markup })
     }
     else {
       res.sendStatus(404)
