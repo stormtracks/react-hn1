@@ -1,3 +1,5 @@
+Fork of https://github.com/insin/react-hn
+
 # [react-hn](https://react-hn.appspot.com)
 
 A [React](http://facebook.github.io/react) &
